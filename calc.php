@@ -2,6 +2,19 @@
 
 // 初期値でnull置いたらwarningが消えた
 $result = null;
+function sampleFunction()
+{
+    define("PREFECTURES", array("tokyo", "osaka", "nagoya", "sendai", "fukuoka"));
+};
+sampleFunction();
+echo PREFECTURES;
+
+
+define("GREETING", "Hello");
+$greeting = "Hi";
+
+$greeting = "Hello, world!";
+// GREETING = "Goodbye"; // ここを有効にするとどうなる？
 
 // postしたタイミングで走る
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -10,6 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // floatは、小数点の型
     $num1 = isset($_POST["num1"]) ? (float)$_POST["num1"] : null;
     $num2 = isset($_POST["num2"]) ? (float)$_POST["num2"] : null;
+
+    $message = "Hello";
+    $isActive = true;
+    $sum = "10" + 5;
+    $concat = 10 . "5";
+    $resultTrue = 10 + true;
+    $resultFalse = 10 + false;
 
     // 演算子と計算するの識別
     // 演算子と計算するどっちも、クリックした時点でpostなっちゃう。
@@ -47,8 +67,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-<?php
+<?php $variable = "Hello"; ?>
+<p><?php echo $variable; ?></p>
 
+
+<?php
 /*
 isset：セットされている変数の中身を確認
 
