@@ -22,7 +22,6 @@
                 <button type="submit" name="operator" value="multiply">×</button>
                 <button type="submit" name="operator" value="divide">÷</button>
             </div>
-
             <div>
                 <button type="submit" name="button" value="calculate">計算する</button>
             </div>
@@ -33,11 +32,15 @@
     <p><?php echo var_dump($sum); ?></p>
     <p><?php echo var_dump($concat); ?></p>
     <p><?php echo $concat; ?></p>
-
     <p><?php echo var_dump($resultTrue); ?></p>
     <p><?php echo var_dump($resultFalse); ?></p>
     <p><?php echo PREFECTURES; ?></p>
     <p><?php echo  $greeting; ?></p>
+    <!-- secondary -->
+    <?php error_log("[" . date('Y-m-d H:i:s') . "]" . "入力エラー", 0); ?>
+    <?php error_log(date('Y-m-d H:i:s'), 0); ?>
 </body>
 
 </html>
+
+<?php error_log("エラーが発生しました", 3, "error.log"); ?>

@@ -7,7 +7,7 @@ function sampleFunction()
     define("PREFECTURES", array("tokyo", "osaka", "nagoya", "sendai", "fukuoka"));
 };
 sampleFunction();
-echo PREFECTURES;
+// echo PREFECTURES;
 
 
 define("GREETING", "Hello");
@@ -66,9 +66,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
+<?php $variable = false; ?>
+<!-- <p><?php echo $variable; ?></p> -->
 
-<?php $variable = "Hello"; ?>
-<p><?php echo $variable; ?></p>
+<?php define("HOGE", null); ?>
+<!-- <p><?php var_dump(HOGE); ?></p> -->
+
+<?php $hoge = 0; ?>
+<!-- <p><?php print_r($hoge); ?></p> -->
+
+<!-- <?php $variable = "Hello"; ?>
+<p><?php echo $variable; ?></p> -->
 
 
 <?php
@@ -79,3 +87,7 @@ isset：セットされている変数の中身を確認
 */
 
 ?>
+
+
+
+
